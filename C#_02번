@@ -1,0 +1,29 @@
+Recursive Function(재귀함수)
+
+어떠한 함수 정의 내에서 자기 자신의 함수를 호출
+void f() {
+...
+f()
+...
+	} 와 같은 형태 (C와 같음)
+ -> 분할정복(divide & conquer) 방식의 문제 해결 기법
+ 단점 : 속도 느림 / 기억장소 소비가 많다
+ 장점 : 알고리즘을 작성하거나 이해하기 쉽다
+
+Fibonacci Sequence
+
+1  1  2  3  5    8      13      21 ...
+f0 f1 f2 f3 f4   fn-2    fn-1    fn ...
+
+f(n)의 정의
+f(n) = f(n-1) + f(n-2) when n >= 2
+f(1) = 1 when n = 1
+f(0) = 1 when n = 0
+boundary condition(무한 루프를 방지)
+
+자료 추상화(data abstraction)의 이해
+ - 서로 밀접한 연관이 있는 함수와 데이터를 묶어서 사물을 표현하는 방법
+
+구조체 => 클래스
+pointer => reference
+dynamic allocation이 기본적으로 된다
