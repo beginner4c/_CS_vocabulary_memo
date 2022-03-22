@@ -1,0 +1,34 @@
+C#에서는 C의 scanf("%d", &data)의 부재
+C#에서는 call by reference가 존재하지 않음
+
+Console.ReadLine()을 이용한 해결
+ - 이 방법이 불편하지만 어차피 C#은
+ 윈도우 프로그래밍을 위한 언어이기에 큰 문제가 없다
+ 
+ String 객체
+ - C 언어의 문자열 관련 작업을 용이하게 만든 library class
+ - '\0', 배열 크기 신경 쓸 필요 없음
+
+String 특징
+1. 동적할당만 가능하기 때문에 reference 사용
+2. read-only : 내용을 수정할 수 없음
+ - replace 같은 걸 써서 생기는 garbage는 automatic garbage colloection이 해결
+3. C#에서 구현 내역은 숨겨져 있음
+
+C언어의 string 함수 대치
+1. strlen(s) => property 사용
+ s.Length 이용
+2. strcpy(target, source) => assignment 사용
+ target = source;
+3. strcat(target,s) => + operator 사용
+ target = tartget + s;
+4. strcmp(s1,s2) => member function 사용
+ s1.Equals(s2)
+ s1.CompareTo(s2)
+5. char *s1 = strdup(s2) => constructor 사용
+ s1 = new String(s2) 사용
+
+StringBuilder
+ - String 객체의 비효율성(garbage, 속도)를 보완하기 위해 만든 클래스
+ - 넉넉한 버퍼를 이용해 String 객체의 내용을 수정함
+ - String과 같은 이름의 함수들이 많이 구현되어 있음
