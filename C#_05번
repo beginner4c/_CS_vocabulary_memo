@@ -1,0 +1,39 @@
+operator 연산자 : + - * /
+operand 피연산자 : constant, X, abc
+expression 산술식 : operand와 operator의 조합
+
+infix notation
+ - operator 위치가 가운데 있는 expression
+ - 27 + 78
+
+prefix notation
+ - operator 위치가 앞에 있는 expression
+ - assembly의 경우
+ - + 27 78 (ADD 1, =F'10')
+
+postfix notation
+ - operator 위치가 맨 뒤에 있는 expression
+ -  27 78 +
+
+** infix notation을 postfix notation으로 고치는 경우 기계적으로 아주 쉽게 계산할 수 있다
+ - post expression evaluator라고 한다
+ ex) 12 8 10 - -8 + +
+     12 -2 -8 + +
+     12 -10 +
+     2 
+     (12 ((8 10 -) -) -8 +) +)
+     (2)
+* 위의 경우 operand보다 operator가 하나 적게 존재해야 한다
+
+token 기본 단위
+ - 가장 작은 단위의 operand 하나 혹은 operator 하나를 token이라고 한다
+
+tokenize
+ - operand와 operator를 구분하는 것을 tokenize라고 한다
+
+tokenID
+ - operator와 EOD, QUIT 등을 번호 별로 구분시켜 놓은 것을 tokenID라고 한다
+
+evaluation rule
+ 1. operand는 무조건 스택에 push
+ 2. operator 경우 2개 pop한 후 결과값을 push
