@@ -1,0 +1,50 @@
+UML(Unified Modeling Language)
+ - 객체지향 프로그램을 설계하기 위한 표기법
+
+OODesigner
+ - UML 작성을 지원하는 도구
+ - 김태균 교수님이 옛날에 만들어서 code forege에 올려놓으신 게 있다
+
+shallow copy
+ - 하나의 포인터가 가르키고 있는 reference를 다른 포인터가 같이 가르키게 되는 경우
+
+deep copy
+ - 기존의 reference가 가진 모든 data를 그대로 복사하는 것
+ 
+ Collection 객체
+
+ - 배열
+문제점 1. 크기 고정 - overflow 발생, 기억장소 낭비
+문제점 2. insert/remove 시에 시간 낭비
+
+ - ArrayList : growable array
+
+ - LinkedList<T> : 이중 연결 리스트
+
+ - Queue : FIFO 컬렉션 객체
+ Enqueue(), Dequeue()
+
+ - Stack : LIFO 컬렉션 객체
+ Push(), Pop()
+
+ - HashTable : sort 와 search 효용성의 조합
+ indexer와 비슷 - public Object this[int i]{ }
+ 데이터가 적을 때 사용하면 좋다
+ Add(key, value), [key]
+ cf.) Java의 경우 put(key, value), get(key) 함수를 사용
+
+ - SortedList : 입력 시 자동 정렬
+ 데이터가 많을 때 사용하면 좋다
+ Add(key,value), [key]
+
+Instance 인스턴스
+ - 추상화 개념 혹은 클래스 객체 같은 템플릿이 실제 구현된 것
+ 
+Enumerator 열거자
+ - Collection의 내부 구조에 상관 없이 동일한 방법으로 요소를 열거하는 것
+
+Iterator 반복자
+ - 객체 지향 프로그래밍에서 배열같은 자료 구조 내부 요소를 Traverse 순회하는 객체
+
+Delegation 위임
+ - 특정 기능을 다른 객체에 위임하고 필요한 때 함수 호출만 받게 하는 거
