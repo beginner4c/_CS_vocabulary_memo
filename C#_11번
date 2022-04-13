@@ -1,0 +1,25 @@
+SW 관련 비용
+개발 비용 : 20 ~ 40 %
+유지 보수 비용 : 60 ~ 80 %
+
+maintenance 유지보수 작업
+ - error correction 에러 수집
+ - adaptiation 환경 맞춤
+ - enhancement 기능 향상
+
+incremental development
+ - 점진적 개발 과정
+
+Console.Write("{0, 5:F2} {1, 5:F2}", x, y);
+ - 0번 자리에 x 값으로 5칸 안에 소숫점 2자리까지 반올림해서 출력
+ - 1번 자리에 y 값으로 5칸 안에 소숫점 2자리까지 반올림해서 출력
+
+linear transformation
+ - 선형 변환
+ex) y = f(x)
+   폭을 늘리기 위해서
+   y1 = a * f(x)
+   y축으로 이동하기 위해서
+   y2 = a * f(x) + b;
+   x축으로 대칭시키기 위해서 
+   y3 = (-1) * a * f(x) + b
