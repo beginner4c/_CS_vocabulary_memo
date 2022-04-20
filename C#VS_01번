@@ -1,0 +1,74 @@
+콘솔 어플 : Sequential Program
+윈도 어플 : Event-driven Program
+	Event의 발생 -> Event Handler 호출
+
+Resource 자원
+
+Font Family 폰트 종류(궁서체 같은 거)
+Font Size 폰트 크기
+Font Style 굵게, 기울게 등
+
+삼각함수 Radian
+
+360도 = 2PI Radian = 6.28
+180도 = PI Radian = 3.14
+
+삼각함수 속성
+주기 함수 : f(x) = f(x - T)
+
+T : 주기 (Period)
+A : 진폭 (Amplitude)
+B : 주파수(Frequency)
+C : 위상차(Phase Difference)
+
+f(x) = A * Sin(B * x - C)
+
+합성 함수 : 삼각함수끼리의 연산
+ ex) f(x) = A * Sin(B * x - C) + A * Sin(B * x - C)
+ 
+ 다항 함수 그리기 Polynomial Function
+x 절편의 범위 : 정의 구역(Domain)
+y 절편의 범위 : 치역(range)
+domain [-3,4]
+최대값, 최소값 [18,24]
+
+y = (x+2)(x-1)(x-3)
+
+데카르트 좌표계 Descartesian Coordinate
+
+y = f(x)
+x * x + y * y = 1
+x * x + y * y = 2 * 2
+
+극 좌표계 Polar Coordinate
+
+r = f(theta)
+r = 1
+r = 2
+r = sin(theta)
+
+윈도우(보편적) / 컴포넌트(JAVA) / 컨트롤(MFC)/위젯(리눅스)
+이벤트에 반응하는 능동적인 사각형 화면 일부분
+
+이벤트
+사용자의 행동(마우스/키보드)에 의해서 생성되는
+정보를 기록한 구조체 데이터 모음
+VM이 생성해서 event queue에 추가 함
+이벤트 구조체 정보 : type, x, y, key, time, 기타 등등
+
+윈도우 프로그래밍 2가지 업무
+1. 화면구성 : sequential programming
+   자동화
+2. 이벤트 핸들링 : event driven programming
+   이벤트 등록(어떤 윈도 / 어떤 이벤트 / 어떤 함수)
+   이벤트 핸들러 작성
+
+이벤트가 발생되면 VM에서 Event Queue를 만들어  Event Dispatching이 발생한다
+Event Dispatching의 결과로 이벤트 핸들러라는 함수로 날아간다
+A.P(Application Processor)가 처리
+
+이벤트 등록과 관계되는 문법 : Delegate
+
+Function Pointer
+ - 함수 이름을 이용하지 않고 함수 호출
+ - 동적인 작업을 할 수 있음
